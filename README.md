@@ -1,70 +1,160 @@
-# Getting Started with Create React App
+# Title
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Virtual Book Library 
 
-## Available Scripts
+## Objective
 
-In the project directory, you can run:
+    Create a virtual book library using React.js, allowing users to browse books, view detailed
+    information about each book, and manage their personal library. The assignment is
+    designed to test your understanding of React, component structure, state management,
+    routing, and good coding practices.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    React.js and Bootstrap
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Completion Instructions
 
-### `npm test`
+### Functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Must Have
 
-### `npm run build`
+    * Home Page (Book Listing):
+        - Display a list of books with details such as title, author, genre, and rating.
+        - The books should be displayed in a grid or list format with a search functionality to filter books by title, author, or genre.
+    * Book Details Page:
+        - When a book is clicked from the Home page, navigate to a detailed view page.
+        - Display detailed information about the selected book including title, author, genre,rating, description, and publication year.
+        - Provide an option to add the book to the "My Library" collection.
+    *  My Library Page:
+        - A separate page that shows the list of books the user has added to their personal library.
+        - Users should be able to remove books from this collection.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Nice to Have
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    
+    - Routing: Implement navigation between pages using `react-router-dom` or any routing solution.
+    - State Management: Use React's state management (`useState`, `useContext`, or any preferred state management solution) to handle the list of books, selected books, and the user's personal library.
+    - Reusable Components: Create reusable components such as BookCard, BookList, and SearchBar.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    - Prop Drilling/Context API: Ensure data is passed between components effectively, avoiding unnecessary prop drilling by using `Context API` or other state management techniques.
+    - Form Handling: Simple form for searching books.
+    * Good Practices:
+      - Component decomposition
+      - Folder structure (e.g., `components`, `pages`, `services`)
+      - Use functional components and hooks
+      - Follow DRY and clean code principles
 
-### `npm run eject`
+### Guidelines to develop a project
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Must Have
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    1. **Project Setup:**
+    - Initialize a React project using `create-react-app` or any other preferred method.
+    - Install dependencies such as `react-router-dom` for routing.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    2. **Set Up Routing:**
+    - Configure routing using `react-router-dom`. Create three routes for:
+        - Home Page (Book Listing)
+        - Book Details Page
+        - My Library Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    3. **Create Pages:**
 
-## Learn More
+    - **Home Page:**
+        - Display the list of books in a grid or list format.
+        - Add a search bar to filter books by title, author, or genre.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - **Book Details Page:**
+        - When a book is clicked on the Home Page, navigate to this page.
+        - Display detailed information about the selected book (title, author, genre, rating, description, and publication year).
+        - Provide a button to add the book to "My Library".
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - **My Library Page:**
+        - Display books added to the user’s personal library.
+        - Implement functionality to remove books from this collection.
 
-### Code Splitting
+    4. **Components:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    - **Reusable Components:**
+        - Create components such as:
+            - `BookCard`: Display individual book details in a card.
+            - `BookList`: Render a list of books.
+            - `SearchBar`: Handle searching/filtering of books.
+    - Ensure each component receives necessary data via props or state management.
 
-### Analyzing the Bundle Size
+    5. **State Management:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+    - Use `useState` and `useContext` (or any other state management tool) for:
+        - Storing the list of books.
+        - Tracking the user’s personal library.
+        - Managing the current book selection for the details page.
+    - Avoid prop drilling by using the Context API where necessary.
 
-### Making a Progressive Web App
+    6. **Data Handling:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+    - Use the provided JSON data to populate the library.
+    - Implement search functionality to filter the book list based on the title, author, or genre.
 
-### Advanced Configuration
+    7. **Adding and Removing Books:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+    - In the Book Details Page, implement functionality to add books to the "My Library".
+    - In the My Library Page, implement functionality to remove books from the user’s collection.
 
-### Deployment
+#### Nice to Have
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    1. **Error Handling:**
+        - Handle errors like empty book lists, failed searches, or network issues gracefully. Display appropriate messages to the user when necessary.
+    2 **UI/UX and Styling:**
 
-### `npm run build` fails to minify
+      - Ensure the application is responsive and provides a clean, user-friendly interface.
+      - Consider using CSS frameworks like Bootstrap or custom styles for consistent design.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    3 **Final Deliverables:**
+
+    - Ensure all pages and features work as expected.
+
+### Submission Instructions
+
+#### Must Have
+    - Ensure all pages and features work as expected.
+    - Push the code to GitHub and provide a `README.md` file with setup instructions.
+    - A GitHub repository containing the code for the project.
+    - A `README.md` file explaining the structure of the project and how to run it.
+
+#### Nice to Have
+
+    - The project should be fully functional with no errors or warnings in the console.
+
+## Resources
+
+### Design files
+
+    /components:
+
+         - MyNavbar.js: Contains your navigation bar component.
+         - BookList.js: Responsible for rendering the list of books on the Home page.
+         - BookCard.js: Displays individual book information in a card format.
+         - SearchBar.js: A component to handle the book search functionality.
+         - LibraryContext.js: Context provider for managing the state of the library (e.g., books added to "My Library").
+    /pages:
+         - Home.js: Main page where the list of books is displayed.
+         - BookDetails.js: Displays detailed information about a selected book.
+         - MyLibrary.js: Shows the user's personal library with the books they have added.
+    /data:
+          - data.json: Contains the JSON data for the books. This is where you store the book data you provided.
+
+    App.js: Main application file that sets up routing and wraps your components in the LibraryProvider.
+
+    index.js: Entry point for your React application where ReactDOM renders the App component.
+
+    /context:
+        - LibraryContext.js: This file can also be used to provide context for your library state management.
+
+### APIs
+
+   - I'm using static data stored in a JSON file (data.json) rather than fetching data from an API. 
+
+### Third-party packages
+
+    - React Router (react-router-dom), React Bootstrap (react-bootstrap and bootstrap).
